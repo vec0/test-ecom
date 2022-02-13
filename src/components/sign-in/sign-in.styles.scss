@@ -1,0 +1,11 @@
+.sign-in {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  .title {
+    margin-top: 10px;
+  }
+}
