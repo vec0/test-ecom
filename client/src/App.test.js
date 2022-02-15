@@ -1,7 +1,16 @@
 import { render, screen } from "@testing-library/react";
-import { useLayoutEffect, useRef } from "react";
+import { createContext, useContext, useLayoutEffect, useRef } from "react";
 import App from "./App";
 import { useEffect } from "react";
+import { Provider } from "react-redux";
+
+/* const EmptyContext = createContext(undefined);
+function asd() {
+  const data = useContext(EmptyContext);
+  return (
+    <EmptyContext.Provider value={this.state.user}></EmptyContext.Provider>
+  );
+} */
 
 test("renders learn react link", () => {
   render(<App />);

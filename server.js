@@ -37,14 +37,14 @@ app.post("/payment", (req, res) => {
     currency: "usd",
   };
 
-  const charge = await stripe.charges.create({
+  /*   const charge = await stripe.charges.create({
     amount: 2000,
     currency: "usd",
     source: "tok_mastercard",
     description: "My First Test Charge (created for API docs)",
-  });
+  }); */
 
-  estripe.charges.creat(body, (err, suc) => {
+  stripe.charges.creat(body, (err, suc) => {
     if (err) {
       res.status(500).send({ error: err });
     } else {
