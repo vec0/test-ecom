@@ -2,9 +2,9 @@
 
 This is my first react project that I have done after watching the couple of react courses, I wanted to do a more serious staff, but due to the lack of knowledge of the backend, I decided to do something quickly, and now I plan to move on to the next course.
 
-See [**Demo Online**](https://e-01.herokuapp.com/).
+- See [**Demo Online**](https://e-01.herokuapp.com/).
 
-If you have the time, please write feedback me regarding the project structure.
+If you have the time, please write feedback me regarding the files structure.
 
 ---
 
@@ -28,4 +28,8 @@ yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open localhost to view it in your browser.
+
+> > > http://localhost:3000
+
+![alt text](https://repository-images.githubusercontent.com/457348790/43501fe0-f68c-48da-aabc-d6410288149f)
