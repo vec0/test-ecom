@@ -1,7 +1,7 @@
 {
 	"name": "test-ecom-server",
 	"version": "1.0.0",
-	"homepage": "https://test-ecom-pub.herokuapp.com/",
+	"homepage": "https://e-1.netlify.app",
 	"license": "Creative Commons Attribution 4.0",
 	"node22": "17.3.1",
 	"node23": "16.14.0",
