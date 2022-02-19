@@ -8,15 +8,22 @@
 .pnp.js
 /.vscode
 /.skip
+/.meida
 /client/node_modules
 /client/.env
 /client/.env.development
+/client/.skip
+/client/.vscode
+/client/.pnp.js
+
 
 # testing
 /coverage
+/client/coverage
 
 # production
 /build
+/client/build
 
 # misc
 .DS_Store
@@ -24,6 +31,11 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
