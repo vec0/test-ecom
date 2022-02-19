@@ -1,19 +1,19 @@
 import { Navigate, useLocation, useParams, useRoutes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import CheckOutPage from "../pages/checkout/checkout.component";
-import HomePage from "../pages/homepage/homepage.component";
-import SignInAndSignUpPage from "../pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-import ShopPage from "../pages/shop/shop.component";
-import { ShopPageRoutes } from "../pages/collection/collection.component";
+//import { takeLatest, put, all, call, delay } from "redux-saga/effects";
 
+/* import ShopPage from "../pages/shop/shop.component";
+import CheckOutPage from "../pages/checkout/checkout.component";
+import SignInAndSignUpPage from "../pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+ */
 export function withRouter(Component) {
-  function ComponentWithRouterProp(props) {
-    let location = useLocation();
-    let navigate = useNavigate();
-    let params = useParams();
-    return <Component {...props} router={{ location, navigate, params }} />;
-  }
-  return ComponentWithRouterProp;
+	function ComponentWithRouterProp(props) {
+		let location = useLocation();
+		let navigate = useNavigate();
+		let params = useParams();
+		return <Component {...props} router={{ location, navigate, params }} />;
+	}
+	return ComponentWithRouterProp;
 }
 
 /* 
@@ -23,42 +23,58 @@ from = () => {
   return from;
 }; */
 
-function RenderRoutes(props) {
-  const from =
-    (props.router.location.state || { from: { pathname: "/" } }).pathname ??
-    "/";
-  const routes = useRoutes([
-    { index: "true", path: "/", element: <HomePage /> },
-    { path: "/home", element: <HomePage /> },
-    ShopPageRoutes("/shop/"),
-    { path: "/shop", element: <ShopPage /> },
-    /* {
-      index: 5,
-      exact: "true",
-      path: "/shop",
-      element: <ShopPage />,
-      children: [
-        {
-          path: ":collectionId",
-          element: <div>asd</div>,
-        },
-      ],
-      // children: [ShopPageRoutes()],
-    }, */
-    { path: "/checkout", element: <CheckOutPage /> },
-    {
-      path: "/signin",
-      element: props.currentUser ? (
-        <Navigate
-          to={from.toLowerCase().endsWith("/signin") ? "" : from}
-          replace="true"
-        />
-      ) : (
-        <SignInAndSignUpPage from={from} />
-      ),
-    },
-  ]);
-  return routes;
-}
+/* 
+const PMS__ = (fn, back) =>
+  new Promise((res, err) =>
+    fn((data) => {
+      back(data);
+      res();
+    }, err)
+  );
+ */
+export const PROMISE_CALL = (apply, fn, args = undefined) => {
+	if (args !== undefined && Object.keys(args).length > 0)
+		return new Promise((res, err) =>
+			fn(
+				args,
+				(data) => {
+					apply(data);
+					res();
+				},
+				err
+			)
+		);
+	else
+		return new Promise((res, err) =>
+			fn((data) => {
+				apply(data);
+				res();
+			}, err)
+		);
+};
 
-export default withRouter(RenderRoutes);
+export function* ASYNC_CALL(fn) {
+	//console.log("1");
+	//yield delay(1000);
+	let finalize = false;
+	let result = false;
+	const zxc = async (fn, back) => {
+		let result = null;
+		try {
+			result = await fn();
+			// console.log("ass " + result);
+		} catch (err) {
+			throw new Error(err);
+		}
+		back(result);
+	};
+	zxc(fn, (res) => {
+		finalize = true;
+		//console.log("2");
+		result = res;
+	});
+	//	while (!finalize) yield delay(16);// single frame using saga
+	while (!finalize) yield null;
+	//console.log("3");
+	return result;
+}

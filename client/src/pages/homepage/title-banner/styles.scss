@@ -1,0 +1,106 @@
+@import "../../../app/global.vars.scss";
+
+.title-banner {
+	//width: 100%;
+	//width: auto;
+	height: 280px;
+	/* 	@font-face {
+		font-family: Moderne Sans;
+		src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2);
+	} */
+
+	video {
+		//width: 100%;
+		height: 280px;
+		//position: absolute;
+		/* top: 0;
+		//left: 0;
+		//width: 100%;
+		height: 100%; */
+		padding: 10px;
+		object-fit: cover;
+		object-position: bottom;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.192);
+	}
+
+	.cont {
+		position: absolute;
+		z-index: 1;
+		padding: 20px;
+		//display: flex;
+		//width: 100%;
+		align-items: flex-end;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		gap: 10px;
+	}
+	div#fashion {
+		margin: auto;
+		vertical-align: bottom;
+		align-content: flex-end;
+		align-content: flex-end;
+		align-self: end;
+		justify-self: end;
+		text-align: left;
+		justify-items: end;
+		justify-items: end;
+	}
+	header {
+		padding: 0;
+		margin: 0;
+		width: 50%;
+		@media screen and (max-width: $medium) {
+			width: 80%;
+		}
+		text-align: center;
+		color: white;
+		transition: 0.4s;
+		background-color: rgba(251, 244, 253, 0.527);
+		background-color: rgba(180, 40, 236, 0.527);
+		background-color: $textColor;
+
+		display: flex;
+	}
+	/* header:hover {
+		background: rgba(255, 255, 255, 0.8);
+		color: #000;
+	} */
+	h1 {
+		width: 80%;
+		//font-family: Moderne Sans, sans-serif;
+		font-size: 1.2em;
+		//width: 100%;
+		//letter-spacing: 0.5rem;
+		//position: absolute;
+		color: white;
+		font-weight: 100;
+		mix-blend-mode: overlay;
+		text-shadow: none;
+		@media screen and (max-width: $large) {
+			font-size: 1em;
+		}
+		@media screen and (max-width: $medium) {
+			font-size: 1em;
+		}
+	}
+	/* 	nav a {
+		text-decoration: none;
+		color: inherit;
+		padding: 1rem;
+	} */
+	h2 {
+		font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+		font-size: 3em;
+		text-align: center;
+		//margin: 2rem 3rem 0;
+		color: #fff;
+		font-weight: 100;
+		padding: 10px;
+		@media screen and (max-width: $large) {
+			font-size: 2em;
+		}
+		@media screen and (max-width: $medium) {
+			font-size: 2em;
+		}
+	}
+}

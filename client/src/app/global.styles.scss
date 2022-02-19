@@ -1,0 +1,98 @@
+@import "./global.vars.scss";
+/* $small: 300px;
+$medium: 900px;
+
+.smth {
+  //some CSS
+  @media screen and (max-width: $small) {
+    //do Smth
+  }
+  @media screen and (min-width: $medium) {
+    //do Smth
+  }
+} */
+
+html {
+	padding: 0;
+	margin: 0;
+	display: unset;
+	overflow-x: hidden;
+	box-sizing: unset;
+}
+
+root,
+#root {
+	padding: 0;
+	margin: 0;
+	display: unset;
+	box-sizing: unset;
+}
+body {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 1.5em;
+
+	font-weight: 500;
+	/*text-shadow: rgba(0, 0, 0, 1) 10px 10px 0 10px; 0px 0px 3px rgba(0, 0, 0, 0.9), */
+	text-shadow: 0 0 3px rgba(44, 64, 75, 0.5);
+	text-shadow: 0 0 5px white;
+	background-color: rgb(243, 240, 235);
+	/* 	background-image: url("../assets/bg_pat_2.gif");
+	background-image: url("../assets/bg_pat_1.jpg");
+	background-image: url("../assets/bg_pat_3.jpg");
+	background-image: url("../assets/bg_pat_4.jpg");
+	background-image: url("../assets/bg_pat_5.jpg");
+	background-image: url("../assets/bg_pat_6.jpg");
+	background-image: url("../assets/bg_pat_7.jpg");
+	background-image: url("../assets/bg_pat_8.jfif");
+	background-image: url("../assets/bg_pat_5.jpg");
+	background-image: url("../assets/bg_pat_3.jpg");
+	background-image: url("../assets/bg_pat_1.jpg"); */
+	background-blend-mode: exclusion;
+	background-color: rgba(255, 255, 255, 0.1);
+	background-repeat: repeat;
+	background-size: auto;
+	padding: 20px 40px 0 40px;
+	margin-bottom: 0;
+
+	font-size: 1.2em;
+	@media screen and (max-width: $large) {
+		font-size: 1.2em;
+	}
+	@media screen and (max-width: $medium) {
+		font-size: 1em;
+		padding: 10px;
+	}
+
+	display: unset;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+// index css
+/* 
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+} */
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.container {
+	max-width: 1000px;
+	//	box-sizing: unset;
+}
