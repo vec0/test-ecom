@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useLayoutEffect } from "react";
 import "./header.styles.scss";
 import { Link, useLocation } from "react-router-dom";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 //import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { connect, useDispatch, useSelector } from "react-redux";
 import CartIcon from "./cart-icon/cart-icon.component";

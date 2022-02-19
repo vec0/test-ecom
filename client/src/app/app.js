@@ -11,7 +11,7 @@ import React, {
 import { connect, useSelector, useDispatch } from "react-redux";
 import { useRoutes, Navigate, useLocation, Link } from "react-router-dom";
 
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.styles.scss";
 import { ShopPageRoutes } from "../pages/shop-collection/shop-collection.page";
 
