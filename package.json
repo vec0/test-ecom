@@ -10,7 +10,7 @@
 	"scripts": {
 		"client": "cd client && yarn start",
 		"server": "nodemon --ignore 'client/*' server.js",
-		"build": "cd client && npm run build",
+		"build": "cd client && yarn build",
 		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
 		"start": "node server.js"
 	},
