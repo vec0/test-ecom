@@ -26,9 +26,9 @@ const CategoryCoverItem = ({ title, imageUrl, size, linkUrl, isNew }) => {
 					}}
 				/>
 			</div>
-			<div class="card-title">
+			<div className="card-title">
 				<h2>
-					<span class="title-accent">...</span>
+					<span className="title-accent">...</span>
 				</h2>
 				{isNew ? <span>NEW</span> : ""}
 

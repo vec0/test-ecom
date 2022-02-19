@@ -1,4 +1,4 @@
-import React, { Component, Profiler, useLayoutEffect } from "react";
+import React, { Component, Profiler, useEffect, useLayoutEffect } from "react";
 import CategoryCoverItem from "../../components/category-cover-item/category-cover-item.component";
 //import MenuItem from "../../components/menu-item/menu-item.component";
 import "./styles.scss";
@@ -7,9 +7,10 @@ import { selectShopCategoriesData } from "../../store/select/shop.selector";
 import TitleBanner from "./title-banner/tittle.banner";
 const HomePage = () => {
 	const allCategoriesData = useSelector(selectShopCategoriesData);
-	useLayoutEffect(() => {
+	//#SCROLL_RESET
+	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, []);
+	});
 	return (
 		<div className="homapage">
 			<div className="p-0 mb-4">

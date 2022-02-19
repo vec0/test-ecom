@@ -24,13 +24,15 @@ const ShopSingleCollectionPage = () => {
 	const cId = params.collectionId.toLocaleLowerCase();
 
 	const isFetching = definedCollection[cId] === undefined;
-	useLayoutEffect(() => {
+	useEffect(() => {
 		window.scrollTo(0, 0);
+	});
+	useLayoutEffect(() => {
 		if (isFetching)
 			dispatch(
 				actionsCreator.fetchSingleCollectionStart(definedCollection, cId)
 			);
-	}, []);
+	});
 
 	const errorMessage = useSelector(selectErrorMessage);
 	if (errorMessage) {

@@ -1,4 +1,4 @@
-import React, { Component, useLayoutEffect } from "react";
+import React, { Component, useEffect, useLayoutEffect } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 //import { CollectionsOverviewGql } from "../collection/collection.gql";
 import "./styles.scss";
@@ -19,12 +19,15 @@ import { useNavigate } from "react-router-dom";
 const ShopPage = () => {
 	const previewCollection = useSelector(selectShopPreviewCollections);
 	const dispatch = useDispatch();
-	useLayoutEffect(() => {
+	//#SCROLL_RESET
+	useEffect(() => {
 		window.scrollTo(0, 0);
+	});
+	useLayoutEffect(() => {
 		dispatch(
 			actionsCreator.fetchPreviewCollectionsStart(previewCollection, -1)
 		);
-	}, []);
+	});
 	const navigate = useNavigate();
 	//const isFetching = useSelector(selectIsCollectionFetching);
 	/* const itemsCountForPreview = getWindowDimensions().width > 800 ? 3 : 2;

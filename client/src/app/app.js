@@ -6,6 +6,7 @@ import React, {
 	useState,
 	useMemo,
 	useLayoutEffect,
+	useRef,
 } from "react";
 import { connect, useSelector, useDispatch } from "react-redux";
 import { useRoutes, Navigate, useLocation, Link } from "react-router-dom";
@@ -31,12 +32,13 @@ export const SessionContext = createContext({
 
 const App = () => {
 	const dispatch = useDispatch();
+	//const ourDiv = useRef();
 	useLayoutEffect(() => {
 		const exist = actionsCreator.checkUserSessionSync();
-		//	console.log("EXIST");
+		//console.log("EXIST");
 		//	console.log(exist);
 		if (exist) dispatch(actionsCreator.signInSuccess(exist));
-	}, []);
+	});
 
 	/* 	const [cartDropdownHidden, setCartDropdownHidden] = useState(true);
 	const currentUser = useSelector(selectCurrentUser);
@@ -61,6 +63,7 @@ const App = () => {
 	);
 	//</SessionContext.Provider>
 };
+export default connect(null)(App);
 
 // spinner header
 
@@ -189,7 +192,6 @@ function RenderRoutes() {
 });
  */
 //export default connect(mapStateToProps, mapDispatchToProps)(App);
-export default App;
 
 /*<Routes>
           <Route path="/" element={<HomePage />} />

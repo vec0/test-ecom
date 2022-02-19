@@ -41,43 +41,48 @@ export default function Footer() {
 		<div className="footer-basic">
 			<footer>
 				<div className="social text-center">
-					<a className="btn btn-google" href="http://google.com/+">
+					<Link to="/" className="btn btn-google" href="http://google.com/+">
 						<i className="fa fa-google-plus"></i>
-					</a>
-					<a
+					</Link>
+					<Link
+						to="/"
 						className="btn btn-facebook"
 						href="http://www.facebook.com/profile.php?id="
 					>
 						<i className="fa fa-facebook"></i>
-					</a>
-					<a className="btn btn-linkedin" href="http://www.linkedin.com/in/">
+					</Link>
+					<Link
+						to="/"
+						className="btn btn-linkedin"
+						href="http://www.linkedin.com/in/"
+					>
 						<i className="fa fa-linkedin"></i>
-					</a>
-					<a className="btn btn-twitter" href="http://twitter.com/">
+					</Link>
+					<Link to="/" className="btn btn-twitter" href="http://twitter.com/">
 						<i className="fa fa-twitter"></i>
-					</a>
-					<a className="btn btn-google" href="http://youtube.com/">
+					</Link>
+					<Link to="/" className="btn btn-google" href="http://youtube.com/">
 						<i className="fa fa-youtube"></i>
-					</a>
-					<a className="btn " href="mailto:">
+					</Link>
+					<Link to="/" className="btn " href="mailto:">
 						<i className="fa fa-envelope-o"></i>
-					</a>
+					</Link>
 				</div>
 				<ul className="list-inline">
 					<li className="list-inline-item">
-						<a>Home</a>
+						<Link to="/">Home</Link>
 					</li>
 					<li className="list-inline-item">
-						<a>Services</a>
+						<Link to="/">Services</Link>
 					</li>
 					<li className="list-inline-item">
-						<a>About</a>
+						<Link to="/">About</Link>
 					</li>
 					<li className="list-inline-item">
-						<a>Terms</a>
+						<Link to="/">Terms</Link>
 					</li>
 					<li className="list-inline-item">
-						<a>Privacy Policy</a>
+						<Link to="/">Privacy Policy</Link>
 					</li>
 				</ul>
 				<br />
