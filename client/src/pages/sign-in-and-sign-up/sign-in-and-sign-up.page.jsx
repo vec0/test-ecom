@@ -24,9 +24,21 @@ export default function SignInAndSignUpPage({ ...rest }) {
 		return <Navigate to="/" replace="true"></Navigate>;
 	} */
 	return (
-		<div className="sign-in-and-sign-up">
-			<SignIn {...rest} />
-			<SignUp {...rest} />
-		</div>
+		<>
+			<div className="sign-in-and-sign-up">
+				<SignIn {...rest} />
+				<SignUp {...rest} />
+			</div>
+			<div
+				style={{
+					color: "red",
+					fontSize: "22px",
+					margin: "auto 0",
+					textAlign: "center",
+				}}
+			>
+				*You can use the following user: qwe@qwe.com asdasd
+			</div>
+		</>
 	);
 }
